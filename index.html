@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Article preview component</title>
+  </head>
+  <body>
+    <main>
+      <div class="card" id="card">
+        <img class="card__image" src="images/drawers.jpg" alt="drawers" />
+        <article class="card__article">
+          <h2 class="article__title">
+            Shift the overall look and feel by adding these wonderful touches to
+            furniture in your home
+          </h2>
+          <p class="article__text">
+            Ever been in a room and felt like something was missing? Perhaps it
+            felt slightly bare and uninviting. I’ve got some simple tips to help
+            you make any room feel complete.
+          </p>
+        </article>
+
+        <div class="author" id="author">
+          <img
+            id="author__avatar"
+            class="author__avatar"
+            src="images/avatar-michelle.jpg"
+            alt="avatar"
+          />
+          <p class="author__data" id="author__data">
+            <span class="author__name">Michelle Appleton</span><br />
+            <span class="author__date">28 Jun 2020</span>
+          </p>
+          <button type="button" class="toggle__btn" id="toggle__button">
+            <img
+              class="btn__image"
+              src="images/icon-share.svg"
+              alt="icon-share"
+            />
+          </button>
+          <div class="share" id="share">
+            <p>Share</p>
+            <div class="icons">
+              <a href="https://www.facebook.com/"
+                ><img src="images/icon-facebook.svg" alt="icon-facebook"
+              /></a>
+              <a href="https://x.com/"
+                ><img src="images/icon-twitter.svg" alt="icon-twitter"
+              /></a>
+              <a href="https://www.pinterest.com/"
+                ><img src="images/icon-pinterest.svg" alt="icon-pinterest"
+              /></a>
+            </div>
+            <button type="button" class="toggle__btn" id="share__btn">
+              <img
+                class="btn__image"
+                src="images/icon-share.svg"
+                alt="icon-share"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
