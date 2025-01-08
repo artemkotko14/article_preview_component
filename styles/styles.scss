@@ -47,7 +47,6 @@ body {
 }
 .author {
   width: 100%;
-  background-color: aqua;
   padding: 0.53rem 1.8rem;
   @include flex-center(row);
   justify-content: space-between;
@@ -149,5 +148,17 @@ button:focus {
     padding-left: 1rem;
     padding-right: 1rem;
     width: max-content;
+    position: relative;
+    /* Create the triangle */
+    &::after {
+      content: '';
+    position: absolute;
+    top: 100%; /* Place the triangle just below the div */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 8px;
+    border-style: solid;
+    border-color: $very-dark-grayish-blue transparent transparent transparent;
+    }
   }
 }

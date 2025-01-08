@@ -54,7 +54,6 @@ body {
 
 .author {
   width: 100%;
-  background-color: aqua;
   padding: 0.53rem 1.8rem;
   display: flex;
   flex-direction: row;
@@ -174,5 +173,17 @@ button:focus {
     padding-right: 1rem;
     width: -moz-max-content;
     width: max-content;
+    position: relative;
+    /* Create the triangle */
+  }
+  .share::after {
+    content: "";
+    position: absolute;
+    top: 100%; /* Place the triangle just below the div */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 8px;
+    border-style: solid;
+    border-color: hsl(217, 19%, 35%) transparent transparent transparent;
   }
 }/*# sourceMappingURL=styles.css.map */
