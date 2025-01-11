@@ -76,7 +76,7 @@ body {
   width: 1.8rem;
   height: 1.8rem;
   border-radius: 50%;
-  border: none; /* Removes the border */
+  border: none; 
   @include flex-center(row);
 }
 button:hover,
@@ -117,6 +117,8 @@ button:focus {
     max-width: 43.5rem;
     max-height: 17rem;
     height: auto;
+   position: relative; /* Set as a reference for the .share div */
+   overflow: visible; /* Allow .share to overflow */
   }
   .card__image {
     margin: 0;
@@ -140,15 +142,27 @@ button:focus {
     font-size: 1.2rem;
   }
   .author__data {
-    padding-right: 9rem;
+    padding-right: 8.6rem;
   }
+.toggle__btn{
+margin-right: 0.4rem;
+}
   .share {
     max-width: 16rem;
     border-radius: 10px;
     padding-left: 1rem;
     padding-right: 1rem;
     width: max-content;
-    position: relative;
+    position: absolute;
+    bottom: 5.2rem;
+    left:33.2rem;
+    z-index: 1000;
+& .icons {
+padding: 0.2rem 1rem;
+  }
+p {
+padding-left: 1rem;
+}
     /* Create the triangle */
     &::after {
       content: '';
@@ -156,9 +170,15 @@ button:focus {
     top: 100%; /* Place the triangle just below the div */
     left: 50%;
     transform: translateX(-50%);
-    border-width: 8px;
+    border-width: 10px;
     border-style: solid;
     border-color: $very-dark-grayish-blue transparent transparent transparent;
+
+
     }
   }
+#share__btn{
+display: none;
+}
+
 }
