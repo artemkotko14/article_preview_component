@@ -108,7 +108,6 @@ button:focus {
 
 @media (min-width: 50rem) {
   .card {
-    overflow: visible; // to make sure share div can be visible outside the card
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -117,8 +116,8 @@ button:focus {
     max-width: 43.5rem;
     max-height: 17rem;
     height: auto;
-   position: relative; /* Set as a reference for the .share div */
-   overflow: visible; /* Allow .share to overflow */
+    position: relative; /* Set as a reference for the .share div */
+    overflow: visible; // to make sure share div can be visible outside the card
   }
   .card__image {
     margin: 0;
@@ -126,6 +125,8 @@ button:focus {
     grid-row: 1/4;
     height: 100%;
     object-position: left;
+    border-top-left-radius: 10px; /* Explicitly round the top-left corner */
+    border-bottom-left-radius: 10px; /* Explicitly round the bottom-left corner */
   }
   .card__article {
     padding-top: 2rem;
